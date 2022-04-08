@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles/style.css" rel="stylesheet" />
+</head>
+
+<body class="energy">
+
+    <div id="nav" class="nav">
+        <a href="javascript:void(0)" class="collapse" onclick="closeNav()">←</a>
+        <a href="index.html">Length Conversion</a>
+        <a href="kwh-to-Joules.htm">Energy Conversion</a>
+        <a href="celsius-to-fahr.htm">Temperature Conversion</a>
+        <a href="https://www.google.com">Exit</a>
+    </div>
+
+    <button class="openbtn" onclick="openNav()">☰</button>
+
+    <h1><b>Joules To kWh Calculator</b></h1>
+
+    <div class="box" id="box">
+        <div class="one">
+            <p class="text">Enter Joules:</p>
+            <input type="number" placeholder="Joules" class="text-input" id="num" oninput="lenghtconvert(this.value)"
+                onchange="lenghtconvert(this.value)" required />
+        </div>
+        <p class="text" id="output">Joules:&emsp;<span id="outputnum"></span></p>
+        <button type="button" id="compute" onclick="window.location.href='kwh-to-Joules.htm'">Swap</button>
+
+    </div>
+
+    <h3>How to convert kWh to Joules</h3>
+    <div>
+        <p class="content"> 1 Joules is equal to 3600000 kWh (Kilowatt-hour) :</p>
+        <p class="content-formula">1 J = 2.7778 x 10<sup>-7</sup>&nbsp;kWh = 1/3600000 kWh</p>
+        <p class="content">Divide the X in Joules with 3600000 to get Y kWh</p>
+        <p class="content-formula">Y = X / 3600000</p>
+    </div>
+
+
+
+    <script src="scripts/app.js"></script>
+    <script>
+        function lenghtconvert(valnum) {
+            document.getElementById("outputnum").innerHTML = valnum / 3600000;
+        }
+    </script>
+</body>
+
+</html>

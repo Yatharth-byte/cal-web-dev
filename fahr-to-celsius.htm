@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link href="styles/style.css" rel="stylesheet" />
+  <title>Project</title>
+</head>
+
+<body class="temperature">
+
+  <div id="nav" class="nav">
+    <a href="javascript:void(0)" class="collapse" onclick="closeNav()">←</a>
+    <a href="index.html">Length Conversion</a>
+    <a href="kwh-to-Joules.htm">Energy Conversion</a>
+    <a href="celsius-to-fahr.htm">Temperature Conversion</a>
+    <a href="https://www.google.com">Exit</a>
+  </div>
+
+  <button class="openbtn" onclick="openNav()">☰</button>
+
+  <h1><b>Fahrenheit To Celsius Calculator</b></h1>
+
+  <div class="box" id="box">
+    <div class="one">
+      <p class="text">Enter Fahrenheit:</p>
+      <input type="number" placeholder="Fahrenheit" class="text-input" id="num" 
+        oninput="lenghtconvert(this.value)" onchange="lenghtconvert(this.value)" required />
+    </div>
+    <p class="text" id="output">Celsius:&emsp;<span id="outputnum"></span></p>
+    <button type="button" id="compute" onclick="window.location.href='celsius-to-fahr.htm'">Swap</button>
+
+  </div>
+
+  <h3>How to convert fahrenheit to celsius</h3>
+  <div>
+    <p class="content"> 0&nbsp;<sup>°</sup>Fahrenheit is equal to -17.778&nbsp;<sup>°</sup>Celsius:</p>
+    <p class="content-formula">0&nbsp;<sup>°</sup>F = -17.778&nbsp;<sup>°</sup>C</p>
+    <p class="content">Subtract 32 from X in fahrenheit and multiply by 1.8 to get Y celsius</p>
+    <p class="content-formula">Y = (X - 32) * 1.8 &nbsp;<sup>°</sup>F</p>
+  </div>
+
+
+
+  <script src="scripts/app.js"></script>
+  <script>
+    function lenghtconvert(valnum) {
+      document.getElementById("outputnum").innerHTML = (valnum - 32) * 0.556;
+    }
+  </script>
+</body>
+
+</html>
