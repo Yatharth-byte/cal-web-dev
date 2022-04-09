@@ -58,7 +58,6 @@
     
     #compute:hover{
       background-color: #0091ff;
-      box-shadow: 0 0 60px 0 ;
       transition: .001s;
       transform: scale(1.02);
       
